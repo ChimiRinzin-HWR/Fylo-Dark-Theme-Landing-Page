@@ -1,0 +1,559 @@
+@import url(./reset.css);
+
+:root{
+    --DarkBlueintroandemailsignupbackground: hsl(217, 28%, 15%);
+    --DarkBluemainbackground: hsl(218, 28%, 13%);
+    --DarkBluefooterbackground: hsl(216, 53%, 9%);
+    --DarkBluetestimonialsbackground: hsl(219, 30%, 18%);
+
+    --Cyaninsidecall-to-actiongradient: hsl(176, 68%, 64%);
+    --Blueinsidecall-to-actiongradient: hsl(198, 60%, 50%);
+    --LightRederror: hsl(0, 100%, 63%);
+}
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    font-family: 'Open Sans';
+    background: url(./images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center 60vw;
+    background-size: contain;
+}
+body::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 45%;
+    width: 100%;
+    background-color: var(--DarkBlueintroandemailsignupbackground);
+    z-index: -1;
+}
+body::after{
+    position: absolute;
+    content: '';
+    top: 90.5vw;
+    left: 0;
+    height: calc(100% - 90.5vw);
+    width: 100%;
+    background-color: var(--DarkBluemainbackground);
+    z-index: -1;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1, h2, strong, button{
+    font-family: 'Raleway';
+    color: white;
+}
+p{
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    color: white;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw;
+    width: 100%;
+    img{
+        width: 10vw;
+    }
+}
+.topright{
+    display: flex;
+    gap: 2vw;
+}
+.topright p:hover{
+    transition: 0.2s;
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+}
+h1{
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: clamp(2.5rem, 3.8vw, 3.5rem);
+    margin: 0 0 2vw;
+}
+h2{
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    line-height: clamp(1.7rem, 2.8vw, 2rem);
+    margin: 0 0 0.8vw;
+}
+.first-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    text-align: center;
+    img{
+        width: 100%;
+    }
+    p{
+        margin: 0 0 2vw;
+        padding: 0 8vw;
+        font-size: clamp(0.9rem, 1.4vw, 1.4rem);
+    }
+}
+.second-div{
+    padding: 10vw 0 8vw;
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    gap: 6vw;
+    text-align: center;
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+            margin: 0 0 1vw;
+        }
+    }
+}
+.third-div{
+    display: flex;
+    align-items: center;
+    padding: 0 8vw;
+    .third-right{
+        padding: 0 0 0 4vw;
+        h1{
+            margin: 0 0 1vw;
+        }
+        p{
+            margin: 0 0 1vw;
+        }
+    }
+    img{
+        width: 50vw;
+    }
+}
+.underline{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 0.5vw;
+    width: fit-content;
+    color: var(--Cyaninsidecall-to-actiongradient);
+    cursor: pointer;
+}
+.underline::before{
+    position: absolute;
+    content: '';
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    border-radius: 0.5vw;
+    background-color: var(--Cyaninsidecall-to-actiongradient);
+}
+.underline:hover{
+    color: white;
+}
+.underline:hover svg use{
+    fill: white;
+}
+.underline:hover::before{
+    background-color: white;
+}
+.fourth-div{
+    padding: 12vw 8vw 10vw;
+}
+.article-container{
+    background-image: url(./images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-size: 5%;
+    display: flex;
+    gap: 3vw;
+    padding: 2.6vw 0.8vw;
+    p{
+        font-size: clamp(0.8rem, 1.1vw, 1rem);
+    }
+    article {
+        padding: 3vw 2vw 2vw;
+        border-radius: 0.5vw;
+        background-color: var(--DarkBluetestimonialsbackground);
+    }
+    .user-div{
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        margin: 2vw 0 0;
+        img{
+            width: 2.5vw;
+            height: 2.5vw;
+            border-radius: 50%;
+        }
+        .post{
+            font-size: clamp(0.6rem, 0.8vw, 0.8rem);
+        }
+        strong{
+            font-size: clamp(0.8rem, 1.1vw, 1rem);
+            font-weight: 600;
+        }
+    }
+}
+button{
+    padding: 1vw 7vw;
+    border-radius: 4vw;
+    font-weight: 500;
+    border: none;
+    background: linear-gradient(90deg, var(--Cyaninsidecall-to-actiongradient), var(--Blueinsidecall-to-actiongradient));
+    font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+}
+button:hover{
+    cursor: pointer;
+    filter: brightness(110%);
+}
+.bottom-div{
+    padding: 0 8vw 10vw;
+    z-index: 0;
+    position: relative;
+}
+.bottom-div::before{
+    content: '';
+    position: absolute;
+    background-color: var(--DarkBluefooterbackground);
+    width: 100%;
+    top: 20%;
+    height: 80%;
+    left: 0;
+    z-index: -1;
+}
+.bottomfirst-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .bottom-first{
+        width: 75%;
+        text-align: center;
+        background-color: var(--DarkBlueintroandemailsignupbackground);
+        padding: 4vw 4vw 3vw;
+        border-radius: 1vw;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: fit-content;
+        margin: 3vw 0 0;
+        input{
+            border-radius: 4vw;
+            width: 70%;
+            padding: 0.8vw 2vw;
+            outline: none;
+            font-size: clamp(0.61rem, 1.1vw, 1.1rem);
+        }
+        button{
+            width: fit-content;
+            padding: 0.8vw 2vw;
+            font-size: clamp(0.61rem, 1.1vw, 1.1rem);
+        }
+    }
+}
+.bottom-bottom{
+    margin: 6vw 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    > img{
+        margin: 0 0 2vw;
+    }
+}
+.bottom-lower{
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    padding-left: clamp(1rem, 3vw,2rem);
+    width: 100%;
+    .location{
+        width: 25vw;
+    }
+    > div:not(.socialPlatforms){
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1vw;
+    }
+    .socialPlatforms{
+        display: flex;
+        align-items: start;
+        gap: 1vw;
+        .fa{
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            height: 2.5rem;
+            width: 2.5rem;
+            text-align: center;
+            border-radius: 50%;
+            padding: 0.7rem 0 0;
+        }
+    }
+}
+.icon-add{
+    position: relative;
+    display: flex;
+    align-items: start;
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
+}
+.icon-add img{
+    position: absolute;
+    left: clamp(-2rem, -3vw,-1rem);
+    top: 0.3vw;
+}
+.fa:hover{
+    color: var(--Cyaninsidecall-to-actiongradient) !important;
+    border: 2px solid var(--Cyaninsidecall-to-actiongradient) !important;
+}
+.bottom-third p:hover, .bottom-fourth p:hover{
+    font-weight: 700;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+}
+footer{
+    position: absolute;
+    top: 99.5%;
+    z-index: 0;
+}
+@media screen and (max-width: 600px) {
+    html, body{
+        background: url(./images/bg-curvy-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center 60vw;
+        background-size: contain;
+    }
+    body::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 45%;
+        width: 100%;
+        background-color: var(--DarkBlueintroandemailsignupbackground);
+        z-index: -1;
+    }
+    body::after{
+        position: absolute;
+        content: '';
+        top: 90.5vw;
+        left: 0;
+        height: calc(100% - 90.5vw);
+        width: 100%;
+        background-color: var(--DarkBluemainbackground);
+        z-index: -1;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1, h2, strong, button{
+        font-family: 'Raleway';
+        color: white;
+    }
+    p{
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+        color: white;
+    }
+    .top{
+        padding: 6vw;
+        img{
+            width: 20vw;
+        }
+    }
+    .topright{
+        display: flex;
+        gap: 2vw;
+    }
+    .topright p:hover{
+        transition: 0.2s;
+        text-decoration: underline;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    h1{
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: clamp(2.5rem, 3.8vw, 3.5rem);
+        margin: 0 0 4vw;
+    }
+    h2{
+        font-size: clamp(1.2rem, 5vw, 2rem);
+        line-height: clamp(1.7rem, 2.8vw, 2rem);
+        margin: 0 0 2vw;
+    }
+    .first-div{
+        width: 100%;
+        padding: 6vw;
+        img{
+            margin: 0 0 5vw;
+        }
+        p{
+            margin: 0 0 8vw;
+            padding: 0 4vw;
+            font-size: clamp(0.9rem, 3.8vw, 1.35rem);
+        }
+    }
+    .second-div{
+        padding: 20vw 6vw 8vw;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 16vw;
+        text-align: center;
+        >div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            img{
+                margin: 0 0 4vw;
+            }
+        }
+    }
+    .third-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 28vw 6vw;
+        .third-right{
+            padding: 0 0 0 4vw;
+            h1{
+                margin: 0 0 4vw;
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+            }
+            p{
+                margin: 0 0 4vw;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .fourth-div{
+        padding: 8vw 12vw 30vw;
+    }
+    .article-container{
+        background-size: 8%;
+        flex-direction: column;
+        background-position: 3% 0;
+        gap: 8vw;
+        padding: 4.5vw 0;
+        p{
+            font-size: clamp(0.8rem, 4vw, 1rem);
+        }
+        article {
+            padding: 8vw 6vw 6vw;
+            border-radius: 1.5vw;
+        }
+        .user-div{
+            gap: 2vw;
+            margin: 2vw 0 0;
+            img{
+                width: 5.5vw;
+                height: 5.5vw;
+            }
+            .post{
+                font-size: clamp(0.6rem, 3vw, 0.7rem);
+            }
+            strong{
+                font-size: clamp(0.8rem, 3vw, 1rem);
+            }
+        }
+    }
+    button{
+        padding: 2vw 20vw;
+        border-radius: 10vw;
+        font-size: clamp(0.9rem, 3.5vw, 1.3rem);
+    }
+    .bottom-div{
+        padding: 0 6vw 10vw;
+        z-index: 0;
+        position: relative;
+    }
+    .bottom-div::before{
+        content: '';
+        position: absolute;
+        background-color: var(--DarkBluefooterbackground);
+        width: 100%;
+        top: 20%;
+        height: 80%;
+        left: 0;
+        z-index: -1;
+    }
+    .bottomfirst-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .bottom-first{
+            width: 102%;
+            padding: 12vw 8vw 8vw;
+            border-radius: 2vw;
+        }
+        form{
+            width: 100%;
+            flex-direction: column;
+            justify-content: start;
+            gap: 6vw;
+            margin: 6vw 0 0;
+            input{
+                border-radius: 8vw;
+                width: 100%;
+                padding: 3vw 6vw;                
+                font-size: clamp(0.7rem, 3vw, 1.1rem);
+            }
+            button{
+                width: 100% !important;
+                padding: 3vw 6vw;
+                font-size: clamp(0.7rem, 3vw, 1.1rem);
+                font-weight: 600;
+            }
+        }
+    }
+    .bottom-bottom{
+        margin: 16vw 0 0;
+        > img{
+            margin: 0 0 8vw;
+        }
+    }
+    .bottom-lower{
+        flex-direction: column;
+        gap: 8vw;
+        width: 100%;
+        padding: 0;
+        .location{
+            width: 100%;
+        }
+        > div:not(.socialPlatforms){
+            gap: 3vw;
+        }
+        .socialPlatforms{
+            margin: 6vw 0 0;
+            justify-content: center;
+            gap: 2vw;
+        }
+    }
+    .location, .email, .phone{
+        margin-left: clamp(1rem, 6vw, 2rem);
+    }
+    .icon-add img{
+        position: absolute;
+        left: clamp(-2rem, -6vw,-1rem);
+        top: 0.3vw;
+    }
+    footer{
+        position: absolute;
+        top: 99.5%;
+        z-index: 0;
+    }
+}
